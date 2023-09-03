@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm to inch Converter</title>
+    <style>
+        body{
+            background-color: #B1A296;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: #557A95;
+            text-align: center;
+            height: 20%;
+            padding:20px;
+            font-size: larger;
+        }
+        #inp{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        #out{
+            padding-top: 11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="head">Convert cm to inches</div>
+        <div id="inp"><input type="number"></div>
+        <div id="but"><button onclick="convert()">Convert</button></div>
+        <div id="out"></div>
+        <script>
+                function convert(){
+                    let inp=document.getElementById("inp").querySelector("input").value;
+                    if(inp === ""){
+                        document.getElementById("out").innerHTML="Empty";
+                    }else{
+                        document.getElementById("out").innerHTML=(inp*2.54)+" "+"inches";
+                    }
+                }
+        </script>
+</body>
+</html>
